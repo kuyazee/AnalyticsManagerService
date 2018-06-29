@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
   # s.requires_arc = true
-  s.source       = { :git => "https://github.com/kuyazee/AnalyticsManagerService.git", :commit => "a3ddd06f43dc2ad9941ff791f819ac43c751c10f" }
+  s.source       = { :git => "https://github.com/kuyazee/AnalyticsManagerService.git", :tag => "#{s.version}" }
   s.source_files  = "Classes", "AnalyticsServiceProtocol/**/*.{h,swift}"
 
   s.description  = "Reusable Analytics Wrapper"
