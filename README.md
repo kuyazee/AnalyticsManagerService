@@ -2,7 +2,6 @@
 
 [![Twitter](https://img.shields.io/badge/Twitter-%40kuyazee-blue.svg)](http://twitter.com/kuyazee)
 [![Github](https://img.shields.io/badge/Github-kuyazee-blue.svg)](https://github.com/kuyazee)
-[![Cocoapods](https://img.shields.io/badge/Cocoapods-red.svg)](#installation)
 
 A **Protocol Oriented Analytics Wrapper**. For more Information read my article on **[Medium](https://medium.com/@zonilyjame/a-protocol-oriented-analytics-layer-574e4967fe50)**
 
