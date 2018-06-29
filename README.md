@@ -1,18 +1,24 @@
 # AnalyticsManagerService
 
-A Protocol Oriented Analytics Wrapper. For more Information read my article on [Medium](https://medium.com/@zonilyjame/a-protocol-oriented-analytics-layer-574e4967fe50)
+[![Twitter](https://img.shields.io/badge/Twitter-%40kuyazee-blue.svg)](http://twitter.com/kuyazee)
+[![Github](https://img.shields.io/badge/Github-kuyazee-blue.svg)](https://github.com/kuyazee)
+[![Cocoapods](https://img.shields.io/badge/Cocoapods-1.2.0-red.svg)](#installation)
 
-## Installation through Cocoapods
+A **Protocol Oriented Analytics Wrapper**. For more Information read my article on **[Medium](https://medium.com/@zonilyjame/a-protocol-oriented-analytics-layer-574e4967fe50)**
 
-```
+## Installation
+
+To install the `AnalyticsManagerService` via [CocoaPods](http://cocoapods.org), simply use the add this in your podfile and then run `pod install`
+
+```Cocoapods
 pod 'AnalyticsManagerService'
 ```
 
 ## Usage
 
-Simply create a subclass of `AnalyticsServiceProtocol` and `AnalyticsEventProtocol` for example we'll use [Fabric](https://Fabric.io) for the example
+Simply create a subclass of `AnalyticsServiceProtocol` and `AnalyticsEventProtocol` for example we'll use **[Fabric](https://Fabric.io)** for the example
 
-```
+```Swift
 // AnalyticsServiceProtocol
 class FabricAnalyticsService: AnalyticsServiceProtocol {
     func initialize(application: UIApplication, launchOptions: [UIApplicationLaunchOptionsKey : Any]?) {
@@ -25,7 +31,7 @@ class FabricAnalyticsService: AnalyticsServiceProtocol {
 }
 ```
 
-```
+```Swift
 // AnalyticsEventProtocol
 enum AnalyticsEvent: AnalyticsEventProtocol {
     case userLoggedIn
@@ -63,9 +69,9 @@ enum AnalyticsEvent: AnalyticsEventProtocol {
 }
 ```
 
-Then we add the service in our UIApplicationDelegate
+Then we add the service in our `UIApplicationDelegate`
 
-```
+```Swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     ...
     
@@ -80,9 +86,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-Using an event would be as simple as accessing the singleton and using the `send(event: _)` function
+Using an **event** would be as simple as accessing the singleton and using the `send(event: _)` function
 
-```
+```Swift
 AnalyticsManagerService.shared.send(event: AnalyticsEvent.userLoggedIn)
 AnalyticsManagerService.shared.send(event: AnalyticsEvent.productSelected(productId: productModel.id))
 ```
